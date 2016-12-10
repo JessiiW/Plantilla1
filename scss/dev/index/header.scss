@@ -1,0 +1,74 @@
+// header
+header.header-main{
+	background: $black;
+	position: relative;
+	height: 60px;
+
+	.main-logo h1{
+		margin: 0;
+		color: $body;
+		line-height: 57px;
+		span{
+			font-size: .7em;
+			font-weight: 400;
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
+
+	.follow i{
+		font-size: .88em;
+	}
+
+	.main-toggle{
+		@include edToggle(1.2em,$body);
+		@include from(m){
+			display: none;
+		}
+	}
+
+	.main-nav{
+		@include edNav(top,m);
+		
+		@include to(m){
+			margin-top: 60px;
+		}
+	}
+	.main-menu{
+		@include edMenu(m); 
+		background: rgba($black,.98);
+
+
+		li{
+			@include to(m){
+				border-bottom: 1px solid rgba($body,.05);
+				padding: 1px 0;
+				transition: .5s;
+				&:hover{
+					padding-left: 20px;
+					background: rgba(0,0,0,.3)
+				}
+			}
+
+			@include to(m){
+				&:nth-child(1){
+					border-top: 1px solid rgba($body,.5);
+				}
+			}
+			
+		}
+
+		li a{
+			color: $body;
+			font-size: .92em;
+			@include from(m){
+				&:hover{
+					box-shadow: 0px -3px $body inset;
+					height: 60px;
+					line-height: 60px;
+				}
+			}
+		}
+	}
+}

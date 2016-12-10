@@ -1,0 +1,90 @@
+//main 
+
+// Seccion de "nosotros"
+
+section.nosotros{
+	background: $body;
+	font-size: .95em;
+	color: $fuente;
+
+	h3{
+		margin-top: 0;
+		color: $black;
+		font-size: 1.1em;
+	}
+
+	.quienes-somos, .nuestro-trabajo, .nuestra-ubicacion {
+		@include to(md){
+			border-bottom: 1px solid rgba(#ccc,.5);
+		}
+		padding: 1.2em 1em;
+	}
+
+	.quienes-somos a, .nuestro-trabajo a, .nuestra-ubicacion a,{
+		color: #fff;
+		background-color: rgba($black,.8);
+		padding: 5px;
+		border-radius: 5px;
+		font-size: .9em;
+		text-decoration: none;
+		transition: .2s ease;
+
+
+		&:hover{
+			background-color: rgba($black,.95);
+			font-size: .89em;
+		}
+	}
+}
+
+// Seccion de servicios
+
+section.wrap-servicios{
+	overflow: hidden;
+	position: relative;
+    
+	@include from(md){
+		padding-top: 1em;
+		height: 600px;
+	}
+	.servicios-img{
+		@include from(md){
+		top: 1em;
+		display: block;
+    	width: 891px;
+    	height: 590px;
+    	position: absolute;
+    	right: 33.333%;
+    	background: transparent url("../img/ipad.jpg") no-repeat;
+		}
+
+		img{
+			margin-top: .5em;
+		}
+	}
+
+	.servicios-descripcion{
+		font-size: .9em;
+		color: $fuente;
+
+
+		h3{
+			color: $black;
+			font-size: 1.1em;
+		}
+
+		a.button{
+			color: #fff;
+			background-color: rgba($black,.8);
+			padding: 5px 15px;
+			border-radius: 5px;
+			font-size: .9em;
+			text-decoration: none;
+			transition: .2s ease;
+
+			&:hover{
+				background-color: rgba($black,.95);
+			}
+		}
+	}
+}

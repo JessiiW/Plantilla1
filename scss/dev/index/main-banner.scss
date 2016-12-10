@@ -1,0 +1,81 @@
+//banner
+
+section.main-banner{
+	background-image: url("../img/banner.jpg");
+	background-size: cover;
+	padding-bottom: 380px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	position: relative;
+
+	@include to(l){
+		padding-bottom: 330px;
+	}
+	@include to(md){
+		padding-bottom: 250px;
+		background-position: top center;
+	}
+
+	.descripcion{
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		color: $body;
+		background: rgba(0,0,0,.3);
+
+		h2{
+			margin-top: 10%;
+			text-shadow: 2px 1px 5px $black;
+
+			@include to(m){
+				margin-top: 8%;
+			}
+			@include to(480px){
+				margin-top: 10%;
+			}
+		}
+
+		i{
+			margin: 0 auto;
+			font-size: 1em;
+			width: 80%;
+
+			@include from(s){
+				width: 50%;
+			}
+
+		}
+
+		a{
+			color: $body;
+			background: $black;
+			padding: 12px 20px;
+			border-radius: 3px;
+			text-decoration: none;
+			font-size: .9em;
+			transition: .3s all;
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 100px;
+			margin-top: 1em;
+				
+
+			span {
+				padding: 4px 5px;
+				background: $body;
+				border-radius: 50%;
+				color: $black;
+			}
+
+			&:hover{
+				width: 110px;
+				background: rgba(#000,.99)
+			}
+		}
+	}
+}
