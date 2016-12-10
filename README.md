@@ -1,1 +1,1 @@
-# Plantilla1
+# Layout responsive with ED-grid
